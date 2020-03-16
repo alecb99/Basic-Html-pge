@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<style>
+    body{
+        background-color:lavender;
+        padding-left: 100px;
+    }
+
+    header{
+        color:rgb(0, 0, 0);
+        position:center;
+        padding-left: 450px;
+        padding-top: 100px;
+        font-family: fantasy;
+        
+    }
+    
+    p{
+        color:rgb(0, 0, 0); 
+        margin-right: 150px;
+        font-family: fantasy;
+    }
+
+    p1{
+        color: red;
+        padding-top: 100px;
+        padding-left: 75px;
+        font-family: fantasy;
+    }
+    p3{
+        font-family: fantasy;
+    }
+
+</style>
+
+<script>
+    function getChoice(choiceID, choice){
+        document.getElementById(choiceID).innerHTML = choice;
+    }
+
+    function resetAnswers(choice){
+        var answers = document.getElementsByClassName("choice");
+        for(var i = 0; i < answers.length; i++)
+        {
+        answers[i].innerHTML = "";  
+        }
+    }
+    </script> 
+<html>
+<header>
+    <h style = "text-align: center; font-size: x-large;" > Alec Burnworth's website</h>
+</header>
+<br> <br>
+<body>
+
+<div id = "intro">
+<p1> This is a tennis quiz that will have questions that range from tournament facts, to player statistics. For player reference, visit the Official ATP website <a href = "https://www.atptour.com/"> here </a>
+</p1>
+</div>
+
+<div id = "quiz">
+    <p class = "question" > Q1. Who holds the most grand slams? </p>
+    <p> <button type="button" onclick= "getChoice('c1','Incorrect')">Rafael Nadal</button> 
+    <p> <button type="button" onclick= "getChoice('c1','Correct')">Roger Federer</button>   
+    <p> <button type="button" onclick= "getChoice('c1','Incorrect')">Novak Djokovic</button> 
+        <br><br>
+        <p2> Answer: </p2>
+        <p3 id = "c1" class = "choice" ></p>
+
+
+    <p class = "question" > Q2. Choose the flag below that represents the country where Rafael Nadal is from </p>
+    <p><image src = "image3.jpg" onclick= "getChoice('c2','Incorrect')"style="width:200px;height:100px;"></image></button>
+    <p><image src = "image2.jpg" onclick= "getChoice('c2','Incorrect')"style="width:200px;height:100px;"></button>
+    <p><image src = "image1.jpg" onclick= "getChoice('c2','Correct')"style="width:200px;height:100px;"> </button>
+        <br><br>
+       <p2> Answer: </p2>
+    <p3 id = "c2" class = "choice" ></p3>
+
+    <p class = "question" > Q3. Which is the oldest stadium of the four grand slams? </p>
+    <p><button type="button" onclick= "getChoice('c3','Incorrect')">U.S. Open</button>
+    <p><button type="button" onclick= "getChoice('c3','Incorrect')">Australian open</button>
+    <p><button type="button" onclick= "getChoice('c3','Correct')">Wimbledon</button>
+    <p><button type="button" onclick= "getChoice('c3','Incorrect')">French Open</button>
+        <br><br>
+        <p2> Answer: </p2> 
+    <p3 id = "c3" class = "choice" ></p3>
+    <br><br><br><br>
+</div>
+    
+    <p3> To reset answers, click the button below</p3>
+    <br><br>
+    <p> <button onclick="resetAnswers()"> Reset</button>
+        
+
+</body>
+</html>
